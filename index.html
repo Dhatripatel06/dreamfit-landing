@@ -177,11 +177,18 @@
       border: 1px solid var(--slate-200);
       transition: all 0.15s;
       background: white;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-ghost-sm:hover {
       background: var(--slate-50);
       border-color: var(--slate-300);
+    }
+
+    .btn-ghost-sm:active {
+      background: var(--slate-100);
     }
 
     .btn-nav-cta {
@@ -194,10 +201,17 @@
       text-decoration: none;
       transition: all 0.15s;
       box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-nav-cta:hover {
       background: var(--blue-700);
+    }
+
+    .btn-nav-cta:active {
+      transform: scale(0.98);
     }
 
     /* ─── HERO ─── */
@@ -273,12 +287,19 @@
       text-decoration: none;
       box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
       transition: all 0.2s;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-primary:hover {
       background: var(--blue-700);
       transform: translateY(-1px);
       box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
     }
 
     .btn-secondary {
@@ -295,11 +316,18 @@
       border: 1px solid var(--slate-200);
       box-shadow: var(--shadow-sm);
       transition: all 0.2s;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-secondary:hover {
       border-color: var(--slate-300);
       box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary:active {
+      background: var(--slate-50);
     }
 
     .hero-note {
@@ -1924,11 +1952,18 @@
       text-decoration: none;
       box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
       transition: all 0.2s;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-primary-lg:hover {
       background: var(--blue-700);
       transform: translateY(-1px);
+    }
+
+    .btn-primary-lg:active {
+      transform: translateY(0);
     }
 
     .btn-outline-lg {
@@ -1944,11 +1979,18 @@
       text-decoration: none;
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.2s;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .btn-outline-lg:hover {
       border-color: rgba(255, 255, 255, 0.4);
       color: white;
+    }
+
+    .btn-outline-lg:active {
+      background: rgba(255, 255, 255, 0.05);
     }
 
     /* ─── FOOTER ─── */
@@ -2096,6 +2138,640 @@
 
       footer {
         padding: 32px 24px;
+      }
+    }
+
+    /* ─── TABLET & SMALL TABLET ─── */
+    @media (max-width: 768px) {
+      .dashboard-body {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .dash-sidebar {
+        display: none;
+      }
+
+      .hero-visual {
+        max-width: 100%;
+        margin-top: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+      }
+
+      .pain-section,
+      .how-section,
+      .features-section,
+      .workflow-section,
+      .proof-section,
+      .pricing-section,
+      .final-cta {
+        padding: 60px 24px;
+      }
+
+      .hero {
+        padding: 80px 24px 0;
+      }
+
+      .pain-grid {
+        gap: 16px;
+        margin-top: 40px;
+      }
+
+      .pain-card {
+        padding: 24px;
+      }
+
+      .feat-block {
+        gap: 32px;
+        padding: 60px 0;
+      }
+
+      .browser-frame {
+        padding: 10px 12px;
+      }
+
+      .browser-url {
+        font-size: 0.65rem;
+        max-width: 200px;
+      }
+
+      .logos-row {
+        gap: 24px;
+      }
+
+      .logo-pill {
+        font-size: 0.78rem;
+      }
+
+      .hero-ctas {
+        gap: 10px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 640px) {
+      html {
+        font-size: 15px;
+      }
+
+      .container,
+      nav .nav-inner,
+      .pain-section,
+      .how-section,
+      .features-section,
+      .feat-block,
+      .workflow-section,
+      .proof-section,
+      .pricing-section,
+      .final-cta,
+      footer {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      nav .nav-inner {
+        height: 56px;
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding: 80px 16px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+        margin-bottom: 16px;
+      }
+
+      .hero-sub {
+        font-size: 1rem;
+        margin-bottom: 28px;
+      }
+
+      .hero-badge {
+        margin-bottom: 20px;
+      }
+
+      .badge {
+        padding: 5px 12px;
+        font-size: 0.72rem;
+      }
+
+      .hero-ctas {
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        gap: 6px;
+        min-height: 44px;
+      }
+
+      .btn-primary svg,
+      .btn-secondary svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .hero-note {
+        font-size: 0.78rem;
+        margin-bottom: 40px;
+      }
+
+      .hero-visual {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      .browser-frame {
+        padding: 8px 10px;
+        gap: 8px;
+      }
+
+      .bd {
+        width: 9px;
+        height: 9px;
+      }
+
+      .browser-url {
+        font-size: 0.6rem;
+        max-width: 150px;
+        padding: 4px 10px;
+      }
+
+      .dashboard-body {
+        padding: 12px;
+        min-height: 300px;
+      }
+
+      .dash-stat {
+        padding: 12px 14px;
+      }
+
+      .ds-val {
+        font-size: 1.1rem;
+      }
+
+      .ds-label {
+        font-size: 0.6rem;
+      }
+
+      .mini-card {
+        border-radius: 8px;
+      }
+
+      .order-row,
+      .pipeline-stages {
+        font-size: 0.65rem;
+      }
+
+      .pain-section,
+      .how-section,
+      .features-section,
+      .workflow-section,
+      .proof-section,
+      .pricing-section,
+      .final-cta {
+        padding: 48px 16px;
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .pain-card {
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .pain-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+      }
+
+      .pain-card p {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+      }
+
+      .pain-fix {
+        font-size: 0.75rem;
+      }
+
+      .section-h2 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        margin-bottom: 12px;
+      }
+
+      .section-eyebrow {
+        font-size: 0.72rem;
+        margin-bottom: 10px;
+      }
+
+      .section-sub {
+        font-size: 0.95rem;
+        max-width: 100%;
+        margin-bottom: 28px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .step-card {
+        padding: 20px 18px;
+      }
+
+      .step-num {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+
+      .step-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+
+      .step-card p {
+        font-size: 0.8rem;
+      }
+
+      .feat-eyebrow {
+        font-size: 0.7rem;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .feat-eyebrow .feat-icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .feat-text h2 {
+        font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+        margin-bottom: 12px;
+      }
+
+      .feat-text p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .feat-bullets {
+        gap: 9px;
+        margin-bottom: 0;
+      }
+
+      .feat-bullets li {
+        font-size: 0.82rem;
+        gap: 8px;
+      }
+
+      .bullet-check {
+        width: 16px;
+        height: 16px;
+        font-size: 0.55rem;
+      }
+
+      .feat-block {
+        gap: 24px;
+        padding: 48px 0;
+      }
+
+      .mockup-card {
+        border-radius: 12px;
+      }
+
+      .mc-header {
+        padding: 12px 14px;
+      }
+
+      .mc-header-title {
+        font-size: 0.85rem;
+      }
+
+      .mc-body {
+        padding: 14px;
+      }
+
+      .crm-table-head,
+      .crm-table-row {
+        grid-template-columns: 1fr 60px 50px 60px;
+        font-size: 0.68rem;
+        padding: 5px 8px;
+      }
+
+      .logos-strip {
+        padding: 32px 16px;
+      }
+
+      .logos-label {
+        font-size: 0.75rem;
+        margin-bottom: 16px;
+      }
+
+      .logos-row {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .logo-pill {
+        font-size: 0.73rem;
+        gap: 6px;
+      }
+
+      .lp-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+      }
+
+      .stages-row {
+        gap: 6px;
+      }
+
+      .stage-item {
+        min-width: 70px;
+        max-width: 100px;
+      }
+
+      .stage-bubble {
+        width: 44px;
+        height: 44px;
+        font-size: 0.95rem;
+      }
+
+      .stage-name {
+        font-size: 0.68rem;
+      }
+
+      .stage-scan {
+        font-size: 0.58rem;
+      }
+
+      .customizable-note {
+        font-size: 0.78rem;
+        padding: 8px 16px;
+        gap: 6px;
+        margin-top: 24px;
+      }
+
+      .proof-num {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+      }
+
+      .proof-label {
+        font-size: 0.8rem;
+      }
+
+      .pricing-grid {
+        gap: 16px;
+      }
+
+      .price-card {
+        padding: 28px 24px;
+        border-radius: 16px;
+      }
+
+      .pc-plan {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+      }
+
+      .pc-price {
+        font-size: 2rem;
+        margin-bottom: 2px;
+      }
+
+      .pc-period {
+        font-size: 0.78rem;
+        margin-bottom: 20px;
+      }
+
+      .pc-features {
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .pc-features li {
+        font-size: 0.82rem;
+      }
+
+      .pc-cta {
+        padding: 12px;
+        font-size: 0.9rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pricing-note {
+        margin-top: 24px;
+        font-size: 0.78rem;
+      }
+
+      .btn-primary-lg,
+      .btn-outline-lg {
+        padding: 14px 28px;
+        font-size: 1rem;
+        gap: 8px;
+        min-height: 48px;
+      }
+
+      .btn-nav-cta {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        min-height: 40px;
+      }
+
+      .final-cta-actions {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-primary-lg,
+      .btn-outline-lg {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .footer-links {
+        gap: 16px;
+      }
+
+      .footer-links a {
+        font-size: 0.78rem;
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+      }
+
+      .nav-logo {
+        font-size: 1rem;
+        gap: 8px;
+      }
+
+      .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      /* Touch-friendly form elements */
+      input, textarea, select {
+        font-size: 16px !important;
+        min-height: 44px;
+      }
+
+      .gf-input {
+        min-height: 44px;
+        font-size: 16px;
+      }
+
+      /* Improved touch targets for clickable elements */
+      a, button {
+        -webkit-touch-callout: none;
+      }
+
+      /* Better scrolling on iOS */
+      body {
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    /* ─── SMALL MOBILE (480px and below) ─── */
+    @media (max-width: 480px) {
+      html {
+        font-size: 14px;
+      }
+
+      .container,
+      nav .nav-inner,
+      .pain-section,
+      .how-section,
+      .features-section,
+      .feat-block,
+      .workflow-section,
+      .proof-section,
+      .pricing-section,
+      .final-cta,
+      footer {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .hero {
+        padding: 60px 12px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+      }
+
+      .hero-sub {
+        font-size: 0.95rem;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 16px;
+        min-height: 44px;
+      }
+
+      .pain-section,
+      .how-section,
+      .features-section,
+      .workflow-section,
+      .proof-section,
+      .pricing-section,
+      .final-cta {
+        padding: 40px 12px;
+      }
+
+      .pain-card {
+        padding: 18px;
+      }
+
+      .pain-card h3 {
+        font-size: 0.9rem;
+      }
+
+      .step-card {
+        padding: 16px 14px;
+      }
+
+      .dashboard-body {
+        padding: 10px;
+        min-height: 250px;
+        gap: 10px;
+      }
+
+      .dash-stat {
+        padding: 10px 12px;
+      }
+
+      .ds-label {
+        font-size: 0.58rem;
+      }
+
+      .ds-val {
+        font-size: 1rem;
+      }
+
+      .ds-sub {
+        font-size: 0.6rem;
+      }
+
+      .proof-num {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+      }
+
+      .price-card {
+        padding: 24px 20px;
+      }
+
+      .pc-price {
+        font-size: 1.8rem;
+      }
+
+      .gf-upload-row {
+        grid-template-columns: 1fr;
+      }
+
+      .gf-row {
+        grid-template-columns: 1fr;
       }
     }
   </style>
